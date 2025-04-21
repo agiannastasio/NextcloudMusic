@@ -1,3 +1,11 @@
+//
+//  Config.swift
+//  NextcloudMusic
+//
+//  Created by agustin on 21/4/25.
+//
+
+
 import Foundation
 
 struct Config {
@@ -16,16 +24,18 @@ struct Config {
   private static var values: [String: String] = {
     guard let url = Bundle.main.url(forResource: "Config", withExtension: "plist"),
           let data = try? Data(contentsOf: url),
-          let plist = try? PropertyListSerialization.propertyList(from: data, format: nil) as? [String: String] ??
-                      (try? PropertyListSerialization.propertyList(from: data, format: nil) as? [String: Any])
+          let rawPlist = try? PropertyListSerialization.propertyList(from: data, format: nil)
     else { return [:] }
 
-    return plist.reduce(into: [:]) {
-      if let value = $1.value as? String {
-        $0[$1.key] = value
-      } else if let dict = $1.value as? [String: String] {
-        dict.forEach { $0[$0.key] = $0.value }
-      }
+    if let dict = rawPlist as? [String: String] {
+      return dict
     }
+
+    if let outerDict = rawPlist as? [String: Any],
+       let nested = outerDict["Root"] as? [String: String] {
+      return nested
+    }
+
+    return [:]
   }()
 }

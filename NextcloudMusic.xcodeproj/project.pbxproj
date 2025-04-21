@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FB29FD592DB6F6FB004F84CC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29FD582DB6F6FB004F84CC /* Config.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FB29FD362DB6EEFF004F84CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		FB29FD282DB6EEFD004F84CC /* NextcloudMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextcloudMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB29FD352DB6EEFF004F84CC /* NextcloudMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextcloudMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB29FD3F2DB6EEFF004F84CC /* NextcloudMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextcloudMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29FD582DB6F6FB004F84CC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		FB29FD1F2DB6EEFD004F84CC = {
 			isa = PBXGroup;
 			children = (
+				FB29FD582DB6F6FB004F84CC /* Config.swift */,
 				FB29FD2A2DB6EEFD004F84CC /* NextcloudMusic */,
 				FB29FD382DB6EEFF004F84CC /* NextcloudMusicTests */,
 				FB29FD422DB6EEFF004F84CC /* NextcloudMusicUITests */,
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB29FD592DB6F6FB004F84CC /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
