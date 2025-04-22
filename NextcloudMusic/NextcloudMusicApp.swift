@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 @main
 struct NextcloudMusicApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  init() {
+    try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+    try? AVAudioSession.sharedInstance().setActive(true)
+  }
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
